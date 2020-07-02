@@ -11,10 +11,13 @@ import UIKit
 class ViewController: UITableViewController {
     
     var data = [Word]()
+    var filterData = [Word]()
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         parseJson()
+        searchControllerSetUp()
     }
     
     func parseJson() {
@@ -37,16 +40,56 @@ class ViewController: UITableViewController {
         
     }
     
+    func searchControllerSetUp() {
+        // Setup the Search Controller
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "type your word..."
+        navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        filterData = data.filter({ (word) -> Bool in
+            return word.name.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadSections([0], with: UITableView.RowAnimation.automatic)
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        if isFiltering() {
+            return filterData.count
+        } else {
+            return data.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.row].name
+        
+        if isFiltering() {
+            cell.textLabel?.text = filterData[indexPath.row].name
+            cell.detailTextLabel?.text = filterData[indexPath.row].andDescription
+        } else {
+            cell.textLabel?.text = data[indexPath.row].name
+            cell.detailTextLabel?.text = data[indexPath.row].andDescription
+        }
         return cell
     }
     
 }
 
-
+extension ViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text!)
+    }
+}

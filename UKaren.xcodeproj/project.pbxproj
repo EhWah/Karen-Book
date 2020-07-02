@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB48F8B424AD54CB000F84B9 /* DataFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FB48F8B324AD54CB000F84B9 /* DataFile.json */; };
 		FB48F8B624AD570D000F84B9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48F8B524AD570D000F84B9 /* Model.swift */; };
+		FB48F8B824AD692C000F84B9 /* knu.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FB48F8B724AD692C000F84B9 /* knu.TTF */; };
 		FB9CC99224AD322D002560A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CC99124AD322D002560A3 /* AppDelegate.swift */; };
 		FB9CC99424AD322D002560A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CC99324AD322D002560A3 /* SceneDelegate.swift */; };
 		FB9CC99624AD322D002560A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9CC99524AD322D002560A3 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		FB48F8B324AD54CB000F84B9 /* DataFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataFile.json; sourceTree = "<group>"; };
 		FB48F8B524AD570D000F84B9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FB48F8B724AD692C000F84B9 /* knu.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = knu.TTF; sourceTree = "<group>"; };
 		FB9CC98E24AD322D002560A3 /* UKaren.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UKaren.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB9CC99124AD322D002560A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB9CC99324AD322D002560A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				FB9CC99724AD322D002560A3 /* Main.storyboard */,
 				FB9CC99A24AD3232002560A3 /* Assets.xcassets */,
 				FB9CC99C24AD3232002560A3 /* LaunchScreen.storyboard */,
+				FB48F8B724AD692C000F84B9 /* knu.TTF */,
 				FB9CC99F24AD3232002560A3 /* Info.plist */,
 			);
 			path = UKaren;
@@ -134,6 +137,7 @@
 				FB9CC99E24AD3232002560A3 /* LaunchScreen.storyboard in Resources */,
 				FB9CC99B24AD3232002560A3 /* Assets.xcassets in Resources */,
 				FB9CC99924AD322D002560A3 /* Main.storyboard in Resources */,
+				FB48F8B824AD692C000F84B9 /* knu.TTF in Resources */,
 				FB48F8B424AD54CB000F84B9 /* DataFile.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
