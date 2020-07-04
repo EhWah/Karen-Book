@@ -35,7 +35,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5gN-gV-DUe">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5gN-gV-DUe">
                                             <rect key="frame" x="20" y="38.5" width="79.5" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Karen-Normal" family="KNU" pointSize="21"/>
@@ -57,11 +57,11 @@
             </objects>
             <point key="canvasLocation" x="1923.1884057971015" y="80.357142857142847"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="pRb-JA-QCA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uo2-bw-Uvo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="70n-Vs-mvd"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="70n-Vs-mvd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9jJ-h1-eY4">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -89,13 +89,14 @@
                     <connections>
                         <segue destination="uo2-bw-Uvo" kind="relationship" relationship="viewControllers" id="ij5-P1-HzE"/>
                         <segue destination="X0I-dk-qrI" kind="relationship" relationship="viewControllers" id="tJ7-8O-UPS"/>
+                        <segue destination="rHn-rB-WR9" kind="relationship" relationship="viewControllers" id="V6O-rN-0yV"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmq-VD-AeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="227.536231884058" y="412.5"/>
         </scene>
-        <!--Quote-->
+        <!--Proverb-->
         <scene sceneID="B94-Yh-sZG">
             <objects>
                 <viewController id="FUQ-sT-o2V" customClass="QuoteViewController" customModule="UKaren" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,17 +106,17 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="iei-BP-YUu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Quote" id="wMA-j9-DKR"/>
+                    <navigationItem key="navigationItem" title="Proverb" id="wMA-j9-DKR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwR-W6-492" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1923" y="749"/>
         </scene>
-        <!--Item-->
+        <!--Proverb-->
         <scene sceneID="Deh-6e-lLz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X0I-dk-qrI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="nDB-Cz-Xhf"/>
+                    <tabBarItem key="tabBarItem" title="Proverb" image="text.quote" catalog="system" id="nDB-Cz-Xhf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oYa-BI-0yK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -130,5 +131,97 @@
             </objects>
             <point key="canvasLocation" x="1211.5942028985507" y="748.66071428571422"/>
         </scene>
+        <!--About Us-->
+        <scene sceneID="7iK-b3-2N3">
+            <objects>
+                <viewController id="PO1-zQ-O8F" customClass="AboutUsViewController" customModule="UKaren" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sU4-H8-YZV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCm-NQ-IW7">
+                                <rect key="frame" x="20" y="108" width="374" height="236.5"/>
+                                <string key="text">UKaren is an offline Karen dictionary app which includes Karen Proverbs and it's available for iPhone, iPod, iPad. UKaren is an app that will allow you search a word and will give you definations and examples. Karen Proverbs is a good thing to know from our Karen elders.
+
+Please give us feedback about how we can make thins app better. Tell us about what you think. Your feedback is very important to us. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-Kv-iLc">
+                                <rect key="frame" x="130.5" y="364.5" width="153" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EoG-8g-4XU">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="30"/>
+                                        <state key="normal" title="Follow us on facebook"/>
+                                        <connections>
+                                            <action selector="facebookTap:" destination="PO1-zQ-O8F" eventType="touchUpInside" id="VKb-gM-BHT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxQ-5y-yOy">
+                                        <rect key="frame" x="0.0" y="40" width="153" height="30"/>
+                                        <state key="normal" title="visit our website"/>
+                                        <connections>
+                                            <action selector="visitOurWebsiteTap:" destination="PO1-zQ-O8F" eventType="touchUpInside" id="ugb-4w-ZlV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="other karen apps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mme-PM-3DN">
+                                        <rect key="frame" x="0.0" y="80" width="153" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esy-3B-Ei6" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="478.5" width="414" height="334.5"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gCm-NQ-IW7" firstAttribute="top" secondItem="fz9-tW-IYE" secondAttribute="top" constant="20" id="2SS-he-7iy"/>
+                            <constraint firstItem="Esy-3B-Ei6" firstAttribute="bottom" secondItem="fz9-tW-IYE" secondAttribute="bottom" id="Dua-og-xE4"/>
+                            <constraint firstItem="Esy-3B-Ei6" firstAttribute="top" secondItem="Thw-Kv-iLc" secondAttribute="bottom" constant="10" id="TCU-gM-ccs"/>
+                            <constraint firstAttribute="trailing" secondItem="gCm-NQ-IW7" secondAttribute="trailing" constant="20" id="Tgs-o7-wJu"/>
+                            <constraint firstItem="Esy-3B-Ei6" firstAttribute="leading" secondItem="fz9-tW-IYE" secondAttribute="leading" id="aMD-lw-H4J"/>
+                            <constraint firstItem="gCm-NQ-IW7" firstAttribute="leading" secondItem="sU4-H8-YZV" secondAttribute="leading" constant="20" id="bfM-ij-Qfw"/>
+                            <constraint firstItem="Thw-Kv-iLc" firstAttribute="centerX" secondItem="sU4-H8-YZV" secondAttribute="centerX" id="eUA-Oo-3nj"/>
+                            <constraint firstItem="Esy-3B-Ei6" firstAttribute="trailing" secondItem="fz9-tW-IYE" secondAttribute="trailing" id="he7-ZD-Ekg"/>
+                            <constraint firstItem="Thw-Kv-iLc" firstAttribute="top" secondItem="gCm-NQ-IW7" secondAttribute="bottom" constant="20" id="iih-Ll-ijC"/>
+                            <constraint firstItem="Thw-Kv-iLc" firstAttribute="centerX" secondItem="sU4-H8-YZV" secondAttribute="centerX" id="uj4-TF-iv9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fz9-tW-IYE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="Zep-nA-V3q"/>
+                    <connections>
+                        <outlet property="myAppView" destination="Esy-3B-Ei6" id="lU0-A0-cBQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1I-Xk-4u7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.8550724637682" y="1451.7857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K2J-qe-fbp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rHn-rB-WR9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="djR-ec-MFa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e5y-oc-nXD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PO1-zQ-O8F" kind="relationship" relationship="rootViewController" id="reb-7Q-MTf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFN-ZS-LQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="1452.4553571428571"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="text.quote" catalog="system" width="128" height="100"/>
+    </resources>
 </document>

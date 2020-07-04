@@ -26,12 +26,11 @@ class QuoteViewController: UIViewController, iCarouselDataSource {
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {
-        return 10
+        return 20
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 1.3, height: self.view.frame.size.height / 1.5))
-        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width / 1.5, height: self.view.frame.size.height / 1.5))
         let imageview = UIImageView(frame: view.bounds)
         view.addSubview(imageview)
         imageview.contentMode = .scaleAspectFit

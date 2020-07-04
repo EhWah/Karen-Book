@@ -76,11 +76,22 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
+        let firstAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.boldSystemFont(ofSize: 19)]
+        let secondAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray, .font: UIFont.italicSystemFont(ofSize: 15) ]
+        
         if isFiltering() {
-            cell.textLabel?.text = filterData[indexPath.row].name
+            let firstString = NSMutableAttributedString(string: filterData[indexPath.row].name, attributes: firstAttributes)
+            let secondString = NSAttributedString(string: filterData[indexPath.row].detail, attributes: secondAttributes)
+            firstString.append(secondString)
+            
+            cell.textLabel?.attributedText = firstString
             cell.detailTextLabel?.text = filterData[indexPath.row].andDescription
         } else {
-            cell.textLabel?.text = data[indexPath.row].name
+            let firstString = NSMutableAttributedString(string: data[indexPath.row].name, attributes: firstAttributes)
+            let secondString = NSAttributedString(string: data[indexPath.row].detail, attributes: secondAttributes)
+            firstString.append(secondString)
+            
+            cell.textLabel?.attributedText = firstString
             cell.detailTextLabel?.text = data[indexPath.row].andDescription
         }
         return cell
