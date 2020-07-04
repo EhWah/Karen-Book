@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uo2-bw-Uvo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mb6-Lu-cZ7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,21 +22,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="8ar-fO-9ep" detailTextLabel="5gN-gV-DUe" style="IBUITableViewCellStyleSubtitle" id="ELr-uh-z1i">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="73.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELr-uh-z1i" id="XMO-Cc-lIm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="73.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8ar-fO-9ep">
-                                            <rect key="frame" x="20" y="4" width="40" height="25.5"/>
+                                            <rect key="frame" x="20" y="9.5" width="40" height="25.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5gN-gV-DUe">
-                                            <rect key="frame" x="20" y="29.5" width="79.5" height="22.5"/>
+                                            <rect key="frame" x="20" y="38.5" width="79.5" height="22.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Karen-Normal" family="KNU" pointSize="21"/>
                                             <nil key="textColor"/>
@@ -54,12 +55,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fX-op-oiJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.0434782608696" y="80.357142857142847"/>
+            <point key="canvasLocation" x="1923.1884057971015" y="80.357142857142847"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="pRb-JA-QCA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uo2-bw-Uvo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="70n-Vs-mvd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9jJ-h1-eY4">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -72,7 +74,61 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbr-Bn-69f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="80"/>
+            <point key="canvasLocation" x="1137.68115942029" y="79.6875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="tSW-D4-Ijw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="mb6-Lu-cZ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wtn-j6-HIl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uo2-bw-Uvo" kind="relationship" relationship="viewControllers" id="ij5-P1-HzE"/>
+                        <segue destination="X0I-dk-qrI" kind="relationship" relationship="viewControllers" id="tJ7-8O-UPS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jmq-VD-AeR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="227.536231884058" y="412.5"/>
+        </scene>
+        <!--Quote-->
+        <scene sceneID="B94-Yh-sZG">
+            <objects>
+                <viewController id="FUQ-sT-o2V" customClass="QuoteViewController" customModule="UKaren" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jot-gp-5Gs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="iei-BP-YUu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quote" id="wMA-j9-DKR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZwR-W6-492" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923" y="749"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Deh-6e-lLz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X0I-dk-qrI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="nDB-Cz-Xhf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oYa-BI-0yK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FUQ-sT-o2V" kind="relationship" relationship="rootViewController" id="HGe-Cs-QfR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyh-H2-IFZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1211.5942028985507" y="748.66071428571422"/>
         </scene>
     </scenes>
 </document>

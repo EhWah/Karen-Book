@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0E14C10E6649FAC671BE757 /* Pods_UKaren.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BCCF11A1FB45E89BDDD3F9 /* Pods_UKaren.framework */; };
+		FB47B88724AE40D1003EA6CB /* QuoteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB47B88624AE40D1003EA6CB /* QuoteCollectionViewController.swift */; };
 		FB48F8B424AD54CB000F84B9 /* DataFile.json in Resources */ = {isa = PBXBuildFile; fileRef = FB48F8B324AD54CB000F84B9 /* DataFile.json */; };
 		FB48F8B624AD570D000F84B9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48F8B524AD570D000F84B9 /* Model.swift */; };
 		FB48F8B824AD692C000F84B9 /* knu.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FB48F8B724AD692C000F84B9 /* knu.TTF */; };
@@ -19,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E7458094A812E566A72205F /* Pods-UKaren.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UKaren.release.xcconfig"; path = "Target Support Files/Pods-UKaren/Pods-UKaren.release.xcconfig"; sourceTree = "<group>"; };
+		89EDBCE847BE753FA5986521 /* Pods-UKaren.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UKaren.debug.xcconfig"; path = "Target Support Files/Pods-UKaren/Pods-UKaren.debug.xcconfig"; sourceTree = "<group>"; };
+		B8BCCF11A1FB45E89BDDD3F9 /* Pods_UKaren.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UKaren.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB47B88624AE40D1003EA6CB /* QuoteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCollectionViewController.swift; sourceTree = "<group>"; };
 		FB48F8B324AD54CB000F84B9 /* DataFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DataFile.json; sourceTree = "<group>"; };
 		FB48F8B524AD570D000F84B9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		FB48F8B724AD692C000F84B9 /* knu.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = knu.TTF; sourceTree = "<group>"; };
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E14C10E6649FAC671BE757 /* Pods_UKaren.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7AC31FA0F06B43EA5DD0417C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89EDBCE847BE753FA5986521 /* Pods-UKaren.debug.xcconfig */,
+				3E7458094A812E566A72205F /* Pods-UKaren.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AFF94EF361605C7195E6D402 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8BCCF11A1FB45E89BDDD3F9 /* Pods_UKaren.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB9CC98524AD322D002560A3 = {
 			isa = PBXGroup;
 			children = (
 				FB9CC99024AD322D002560A3 /* UKaren */,
 				FB9CC98F24AD322D002560A3 /* Products */,
+				7AC31FA0F06B43EA5DD0417C /* Pods */,
+				AFF94EF361605C7195E6D402 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +91,7 @@
 				FB9CC99124AD322D002560A3 /* AppDelegate.swift */,
 				FB9CC99324AD322D002560A3 /* SceneDelegate.swift */,
 				FB9CC99524AD322D002560A3 /* ViewController.swift */,
+				FB47B88624AE40D1003EA6CB /* QuoteCollectionViewController.swift */,
 				FB48F8B524AD570D000F84B9 /* Model.swift */,
 				FB48F8B324AD54CB000F84B9 /* DataFile.json */,
 				FB9CC99724AD322D002560A3 /* Main.storyboard */,
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB9CC9A224AD3232002560A3 /* Build configuration list for PBXNativeTarget "UKaren" */;
 			buildPhases = (
+				620A03245E0F24913756EBBB /* [CP] Check Pods Manifest.lock */,
 				FB9CC98A24AD322D002560A3 /* Sources */,
 				FB9CC98B24AD322D002560A3 /* Frameworks */,
 				FB9CC98C24AD322D002560A3 /* Resources */,
+				CE659880170FD8FB9C87FAEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,11 +173,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		620A03245E0F24913756EBBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UKaren-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE659880170FD8FB9C87FAEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UKaren/Pods-UKaren-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UKaren/Pods-UKaren-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UKaren/Pods-UKaren-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FB9CC98A24AD322D002560A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB47B88724AE40D1003EA6CB /* QuoteCollectionViewController.swift in Sources */,
 				FB9CC99624AD322D002560A3 /* ViewController.swift in Sources */,
 				FB9CC99224AD322D002560A3 /* AppDelegate.swift in Sources */,
 				FB9CC99424AD322D002560A3 /* SceneDelegate.swift in Sources */,
@@ -294,6 +366,7 @@
 		};
 		FB9CC9A324AD3232002560A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89EDBCE847BE753FA5986521 /* Pods-UKaren.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +385,7 @@
 		};
 		FB9CC9A424AD3232002560A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E7458094A812E566A72205F /* Pods-UKaren.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
