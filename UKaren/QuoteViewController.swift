@@ -11,18 +11,13 @@ import iCarousel
 
 class QuoteViewController: UIViewController, iCarouselDataSource {
 
-    let myCarousel: iCarousel = {
-        let view = iCarousel()
-        view.type = .rotary
-        return view
-    }()
+    @IBOutlet weak var myCarousel: iCarousel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(myCarousel)
         myCarousel.dataSource = self
-        myCarousel.autoscroll = -0.5
-        myCarousel.frame = CGRect(x: 0, y: 150, width: view.frame.size.width, height: 400)
+        myCarousel.autoscroll = 0.5
+        myCarousel.type = .coverFlow2
     }
     
     func numberOfItems(in carousel: iCarousel) -> Int {

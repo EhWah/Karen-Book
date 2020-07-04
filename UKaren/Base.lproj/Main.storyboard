@@ -103,10 +103,25 @@
                     <view key="view" contentMode="scaleToFill" id="jot-gp-5Gs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-Ix-a0U" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R7u-Ix-a0U" firstAttribute="top" secondItem="iei-BP-YUu" secondAttribute="top" id="0r0-QS-UqS"/>
+                            <constraint firstItem="R7u-Ix-a0U" firstAttribute="leading" secondItem="iei-BP-YUu" secondAttribute="leading" id="DlU-NG-FIm"/>
+                            <constraint firstItem="iei-BP-YUu" firstAttribute="trailing" secondItem="R7u-Ix-a0U" secondAttribute="trailing" id="KCT-2S-vJa"/>
+                            <constraint firstItem="iei-BP-YUu" firstAttribute="bottom" secondItem="R7u-Ix-a0U" secondAttribute="bottom" id="Yri-TG-gSF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iei-BP-YUu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Proverb" id="wMA-j9-DKR"/>
+                    <connections>
+                        <outlet property="myCarousel" destination="R7u-Ix-a0U" id="G7K-ZP-P1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZwR-W6-492" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
